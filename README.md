@@ -44,7 +44,16 @@ class ZoomDeauthController {
 3. Set a proper version (not a SNAPSHOT) in `pom.xml`
 4. Run `mvn -s settings-sonatype.xml clean deploy`
 
+## GPG setup
+
+1. Install GPG with `brew install gnupg`
+2. Generate a key with `gpg --gen-key`
+3. Set `gpg.keyname` as the output of `gpg --list-signatures --keyid-format 0xshort`
+4. Submit your key to a key server with `gpg --keyserver hkps://keyserver.ubuntu.com --send-keys <KEY_ID>`
+
 ## See also
 
 - [Zoom Developers](https://developers.zoom.us/docs/api/rest/webhook-reference/#verify-with-zooms-header)
 - [webhook-sample](https://github.com/zoom/webhook-sample/blob/master/index.js#L31)
+- [Sonatype: Publishing my artifact](https://central.sonatype.org/publish/publish-guide)
+- [Sonatype: GPG signed components](https://central.sonatype.org/publish/publish-maven/#gpg-signed-components)
