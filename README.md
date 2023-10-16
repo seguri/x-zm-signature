@@ -2,6 +2,18 @@
 
 A library for verifying Zoom webhook events through the `x-zm-signature` and `x-zm-request-timestamp` headers.
 
+## Installation
+
+The library is distributed on [Maven Central](https://central.sonatype.com/artifact/name.seguri.java/x-zm-signature). Add this dependency:
+
+```
+<dependency>
+    <groupId>name.seguri.java</groupId>
+    <artifactId>x-zm-signature</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
 ## Spring Boot usage
 
 If you copy and paste the following code, make sure that `zoom.secret-token` is available, e.g. through `application.properties`, an environment variable `ZOOM_SECRET_TOKEN` , vault, k8s secrets, etc.
